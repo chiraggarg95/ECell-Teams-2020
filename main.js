@@ -274,6 +274,8 @@
         $('#section' + id.toString()).find('.card').css('transform');
         $('#section' + id.toString()).find('.card').css('opacity');
         $('#section' + id.toString()).find('.card').css('opacity', '0');
+        $('#section' + id.toString()).css('z-index', 100);
+        $('#section' + active.toString()).css('z-index', 1);
         $('#section' + id.toString()).find('.card').css('transform', 'translateY(' + d.toString() + 'px)');
         prv = active;
         setTimeout(function() {
@@ -282,8 +284,10 @@
           $('#section' + id.toString()).find('.card').css('opacity', '0');
           $('#section' + id.toString()).find('.card').css('transform');
           $('#section' + id.toString()).find('.card').css('transform', 'none');
+          // $('#section' + id.toString()).css('z-index', 100);
           $('#section' + active.toString()).find('.card').css('transform');
           $('#section' + active.toString()).find('.card').css('transform', 'none');
+          // $('#section' + active.toString()).css('z-index', 1);
           $('#section' + id.toString()).find('.card1').css('opacity');
           $('#section' + id.toString()).find('.card1').css('opacity', '1');
           active1 = 1;
@@ -321,12 +325,12 @@
       }
     });
   
-    interval = setInterval(function() {
-      if ($(document).data('scrolling') === '1') {
-        return;
-      }
-      return $('#right').trigger('click');
-    }, 60000);
+    // interval = setInterval(function() {
+    //   if ($(document).data('scrolling') === '1') {
+    //     return;
+    //   }
+    //   return $('#right').trigger('click');
+    // }, 60000);
   
     $('#left').click(function() {
       var id1, n;

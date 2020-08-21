@@ -54,6 +54,13 @@ header a {
   font-size: 18px;
 }
 
+header h1{
+  color: white;
+  font-size: 2.5rem;
+  /* padding: 0 0 20px 0; */
+  margin: 0px;
+}
+
 #ecell-logo {
   width: 80px;
   height: 80px;
@@ -223,7 +230,8 @@ header a {
   transition: background 0.5s;
 }
 #background.b1 {
-  background: url("./images/Vision.jpg") fixed center no-repeat;
+  /* background: url("./images/Vision.jpg") fixed center no-repeat; */
+  background-color: #7e0ebd;
   background-size: cover;
 }
 #background.b2 {
@@ -259,7 +267,7 @@ header a {
   background-size: cover;
 }
 
-.card {
+.card-w {
   position: fixed;
   height: calc(100% - 80px);
   width: 100vw;
@@ -275,6 +283,10 @@ header a {
   opacity: 1;
 }
 
+section{
+  background-color: #000000;
+}
+
 .title, .content {
   font-size: 2.5em;
   padding: 15px 45px;
@@ -283,22 +295,6 @@ header a {
   top: 150px;
   bottom: 0;
 }
-
-/* .title{
-    font-size: 2.5em;
-    position: relative;
-    display: block;
-} */
-
-/* .title:after {
-    content: "";
-    background-color: #fff;
-    width: 200px;
-    height: 2px;
-    position: absolute;
-    bottom: 50px;
-    left: 100px;
-} */
 
 .content {
   position: relative;
@@ -490,3 +486,178 @@ header a {
   }
 
 }
+
+/* new css */ 
+.row {
+  min-height: 100%;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #000000;
+}
+
+.column {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.center {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.card-info {
+  min-height: 250px;
+  max-height: 300px;
+  min-width: 250px;
+  max-width: 300px;
+  -webkit-box-flex: 1;
+          flex: 1;
+  margin: 22px;
+}
+
+.card-info:hover .inner {
+  -webkit-transform: rotatey(180deg);
+          transform: rotatey(180deg);
+}
+
+.card-info:hover .text,
+.card-info:hover .underline,
+.card-info:hover .subtitle {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.6s ease;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  z-index: 1;
+}
+
+.inner:before {
+  content: '';
+  z-index: -2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: inherit;
+}
+
+.inner:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 1em;
+  right: 1em;
+  bottom: 1em;
+  left: 1em;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+}
+
+.text {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* .underline {
+  width: calc(100% - 2em);
+  border-bottom: 3px solid #EA5455;
+  -webkit-transform: translatez(60px);
+          transform: translatez(60px);
+} */
+
+.subtitle {
+  font-family: arial;
+}
+
+.text, .subtitle {
+  -webkit-transform: translatez(60px);
+          transform: translatez(60px);
+  color: #000000;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+}
+
+.backgroundclip .text,
+.backgroundclip .subtitle {
+  background-image: linear-gradient(135deg, #FEB692 10%, #EA5455 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.backface {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: justify;
+  padding: 2em;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.9);
+  -webkit-transform: rotatey(180deg) translatez(60px);
+          transform: rotatey(180deg) translatez(60px);
+  overflow: hidden;
+  background-color: black;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+#img1, #img2, #img3, #img4, #img5, #img6, #img7, #img8 {
+  background-size: cover;
+}
+
+#img1 {
+  background-image: url(./images/oc\ 1.jpeg);
+}
+
+#img2 {
+  background-image: url(./images/oc\ 1.jpeg);
+}
+
+#img3 {
+  background-image: url(./images/oc\ 1.jpeg);
+}
+
+#img4 {
+  background-image: url(./images/oc\ 1.jpeg);
+}
+
+#img5 {
+  background-image: url(./images/oc\ 1.jpeg);
+}
+
+#img6 {
+  background-image: url(./images/oc\ 1.jpeg);
+}
+#img7 {
+  background-image: url(./images/oc\ 1.jpeg);
+}
+
+#img8 {
+  background-image: url(./images/oc\ 1.jpeg);
+}
+/* new css */ 
