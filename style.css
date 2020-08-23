@@ -267,7 +267,7 @@ header h1{
   background-size: cover;
 }
 
-.card-w {
+.card {
   position: fixed;
   height: calc(100% - 80px);
   width: 100vw;
@@ -487,9 +487,17 @@ section{
 
 }
 
+#section1{
+  z-index: 1000;
+}
+
+#section2, #section3, #section4 {
+  z-index: 1;
+}
+
 /* new css */ 
 .row {
-  min-height: 100%;
+  height: 100%;
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
@@ -527,6 +535,7 @@ section{
   -webkit-box-flex: 1;
           flex: 1;
   margin: 22px;
+  z-index: 1250;
 }
 
 .card-info:hover .inner {
