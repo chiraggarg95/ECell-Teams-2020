@@ -2,7 +2,7 @@
 (function() {
     var active, active1, func1, interval, nxt, prv, teX, teY, transit_down, transit_up, try1, try2, tsX, tsY;
   
-    active = 1;
+    active = 0;
   
     active1 = 1;
   
@@ -181,10 +181,10 @@
           try2 = 0;
         }
       }
-      if (try1 >= 2 && active > 1) {
+      if (try1 >= 2 && active > 0) {
         $('#navlink' + (active - 1).toString()).trigger('click');
       }
-      if (try2 >= 2 && active < 4) {
+      if (try2 >= 2 && active < 10) {
         return $('#navlink' + (active + 1).toString()).trigger('click');
       }
     };
@@ -210,9 +210,9 @@
       }
       teY = e.originalEvent.changedTouches[0].clientY;
       teX = e.originalEvent.changedTouches[0].clientX;
-      if ((tsY > teY + 70) && active < 4) {
+      if ((tsY > teY + 70) && active < 10) {
         return $('#navlink' + (active + 1).toString()).trigger('click');
-      } else if ((tsY < teY - 70) && active > 1) {
+      } else if ((tsY < teY - 70) && active > 0) {
         return $('#navlink' + (active - 1).toString()).trigger('click');
       } else {
         if (tsX > teX + 70) {
@@ -267,6 +267,7 @@
       $(document).data('scrolling', '1');
       $('.navlink').css('cursor', 'default');
       id = parseInt($(this).attr('id').slice(-1));
+      console.log(active, id);
       if (id !== active) {
         direction = id > active ? 1 : -1;
         d = direction * 200;
@@ -274,7 +275,7 @@
         $('#section' + id.toString()).find('.card').css('transform');
         $('#section' + id.toString()).find('.card').css('opacity');
         $('#section' + id.toString()).find('.card').css('opacity', '0');
-        $('#section' + id.toString()).css('z-index', 1000);
+        $('#section' + id.toString()).css('z-index', 2);
         $('#section' + active.toString()).css('z-index', 1);
         $('#section' + id.toString()).find('.card').css('transform', 'translateY(' + d.toString() + 'px)');
         prv = active;
@@ -291,7 +292,7 @@
           $('#section' + id.toString()).find('.card1').css('opacity');
           $('#section' + id.toString()).find('.card1').css('opacity', '1');
           active1 = 1;
-          return $('#background').attr('class', 'b' + $('#section' + id.toString()).find('.card:nth-of-type(' + active1.toString() + ')').find('.title').attr('class').slice(-1));
+          // return $('#background').attr('class', 'b' + $('#section' + id.toString()).find('.card:nth-of-type(' + active1.toString() + ')').find('.title').attr('class').slice(-1));
         }, 1000);
         setTimeout(function() {
           if ($(window).width() < 750) {

@@ -279,12 +279,13 @@ header h1{
   transition: all 1s;
 }
 
-#section1 .card1 {
+#section0 .card1 {
   opacity: 1;
 }
 
 section{
   background-color: #000000;
+  position: relative;
 }
 
 .title, .content {
@@ -487,8 +488,8 @@ section{
 
 }
 
-#section1{
-  z-index: 1000;
+#section0{
+  z-index: 2;
 }
 
 #section2, #section3, #section4 {
