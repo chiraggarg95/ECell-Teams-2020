@@ -22,7 +22,7 @@ body {
   }
 
 header {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     width: 100%;
     display: flex;
@@ -161,7 +161,7 @@ header h1{
   }
 
   .card {
-    position: fixed;
+    /* position: fixed; */
     height: calc(100% - 80px);
     width: 100vw;
     left: 0;
@@ -320,3 +320,9 @@ header h1{
     background-image: url(./images/oc\ 1.jpeg);
   }
 /* Image Card CSS */
+
+section h1{
+  text-align: center;
+  background-color: #000000;
+  color: #1f75ff;
+}

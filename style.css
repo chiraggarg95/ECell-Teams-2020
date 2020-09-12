@@ -458,7 +458,7 @@ section{
   height: calc( 100% - 48px );
 }
 
-@media screen and (max-width: 576px) {
+@media (max-width: 576px) {
   .text-content{
     padding: 15px 20px;
     max-height: 100%;
@@ -667,7 +667,7 @@ section{
   transform: scale(1.5);
 }
 
-@media screen and (max-width: 576px){
+@media (max-width: 576px){
   .card-info {
     min-height: 150px;
     max-height: 125px;
